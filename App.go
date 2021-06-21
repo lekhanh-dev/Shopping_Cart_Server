@@ -30,8 +30,19 @@ func main() {
 	})
 
 	authRouter := app.Group("/auth")
-	routes.ConfigAuthRouter(&authRouter) //http://localhost:3000/api/book
+	routes.ConfigAuthRouter(&authRouter)
+
+	productRouter := app.Group("/api/product")
+	routes.ConfigProductRouter(&productRouter) //http://localhost:3000/api/product
+
+	productImageRouter := app.Group("/api/product/image")
+	routes.ConfigProductImageRouter(&productImageRouter)
+
+	reviewRouter := app.Group("/api/review")
+	routes.ConfigReviewRouter(&reviewRouter)
+
+	categoryRouter := app.Group("/api/category")
+	routes.ConfigCategoryRouter(&categoryRouter)
 
 	app.Listen(":3000")
-
 }

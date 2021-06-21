@@ -1,4 +1,4 @@
-package controller
+package controllers
 
 import (
 	"github.com/gofiber/fiber/v2"
@@ -7,7 +7,6 @@ import (
 
 func Register(c *fiber.Ctx) error {
 	user := models.User{
-		Name:     "Hello world",
 		Email:    "hello@gmail.com",
 		Password: "XXXXXXXXXXX",
 		Phone:    "0331234569",
